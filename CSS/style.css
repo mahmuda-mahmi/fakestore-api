@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: 'F1';
-    src: url('../f1.ttf') format('truetype');
+    src: url('../fonts/f1.ttf') format('truetype');
 }
 
 .jost{
