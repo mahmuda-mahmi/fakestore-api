@@ -22,7 +22,7 @@ const showAllProducts = (products = productsArray) => {
                 <p class="font-semibold text-center">$${element.price}</p>
                 <div class ="flex gap-4 justify-between items-center px-4">
                 <p>${element.rating.rate} <i class="fa-sharp fa-solid fa-star"></i></p>
-                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-sm"><i class="fa-sharp fa-thin fa-cart-shopping"></i></button>
+                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-sm"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
                 </div>
                 </div>`;
         showCards.appendChild(div);
@@ -35,6 +35,10 @@ const getMenuNames = async () => {
     const res = await fetch('https://fakestoreapi.com/products/categories');
     const nameData = await res.json();
     menuName(nameData);
+    const categoryName = document.getElementById('current-category');
+    nameData.forEach(element => {
+        categoryName.innerHTML = `${element}`;
+    })
 }
 
 /// getting menu names -----------------

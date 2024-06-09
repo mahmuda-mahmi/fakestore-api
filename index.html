@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake Store</title>
   <link rel="stylesheet" href="https://fakhrul62.github.io/icons/css/fontawesome.css">
-  <link rel="stylesheet" href="https://fakhrul62.github.io/icons/css/sharp-thin.css">
   <link rel="stylesheet" href="https://fakhrul62.github.io/icons/css/sharp-solid.css">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,11 +17,12 @@
   <section>
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <button class="text-5xl f1 font-light" onclick="getAllProducts()">Unreal Store</button>
+        <a class="text-5xl f1 font-light" href="index.html">Unreal Store</a>
       </div>
 
       <div class="flex-none gap-2">
         <div class="flex" id="categories">
+          <li class="list-none"><button class="btn btn-ghost p-2 text-md capitalize" onclick="getAllProducts()">All</button></li>
           
         </div>
 
@@ -54,6 +54,19 @@
     </div>
   </section>
 
+  <!-- ----------------------------- sort------------------------ -->
+  <section class="w-11/12 mx-auto my-6">
+    <div class="flex justify-between">
+      <div>
+        <h2 id="current-category">All Products</h2>
+      </div>
+      <div class="flex gap-4 *:bg-slate-800 *:text-lg *:text-white *:py-2 *:px-3 *:rounded-lg *:font-bold">
+        <button><i class="fa-sharp fa-solid fa-arrow-up-1-9"></i></button>
+        <button><i class="fa-sharp fa-solid fa-arrow-down-wide-short"></i></button>
+      </div>
+    </div>
+  </section>
+
   <!-- ---------------------------- SHOW ALL CARDS ------------------------------ -->
   <section class="w-11/12 mx-auto my-6">
     <div id="showAllCards" class="grid grid-cols-4 gap-4 my-4">
@@ -68,7 +81,6 @@
 
   <script src="JS/main.js"></script>
   <script src="https://fakhrul62.github.io/icons/js/fontawesome.js"></script>
-  <script src="https://fakhrul62.github.io/icons/js/sharp-thin.js"></script>
   <script src="https://fakhrul62.github.io/icons/js/sharp-solid.js"></script>
 </body>
 
