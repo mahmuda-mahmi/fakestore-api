@@ -19,7 +19,7 @@ const showAllProducts = (products = productsArray) => {
                 <figure><img src="${element.image}" class="w-full h-60 object-contain"/></figure>
                 <div class="card-body p-0 justify-between">
                 <h2 class="text-sm my-2 font-semibold text-center">${element.title}</h2>
-                <p class="font-semibold text-center">${element.price}$</p>
+                <p class="font-semibold text-center">$${element.price}</p>
                 <div class ="flex gap-4 justify-between items-center px-4">
                 <p>${element.rating.rate} <i class="fa-sharp fa-solid fa-star"></i></p>
                 <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-sm"><i class="fa-sharp fa-thin fa-cart-shopping"></i></button>
