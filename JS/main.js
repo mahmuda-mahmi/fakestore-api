@@ -47,16 +47,27 @@ const menuName = (names) => {
         const li = document.createElement('li');
         li.classList = "list-none";
         li.innerHTML = `
-        <button class="btn btn-ghost p-2 text-md capitalize" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</button>`;
+        <a class="cursor-pointer capitalize nav-active nav-menu" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
         menu.appendChild(li);
     })
+    activeMenu();
 }
 
 //// changing the name of category --------------------------------------
 const changeName = (element) => {
     const categoryName = document.getElementById('current-category');
-        categoryName.innerHTML = element;
+    categoryName.innerHTML = element;
 }
+
+const activeMenu = () => {
+    const links = document.querySelectorAll(".nav-active");
+    links.forEach(btn => btn.addEventListener("click",(e)=>{
+    // e.preventDefault();
+    document.querySelector(".nav-active.active").classList.remove("active");
+    btn.classList.add("active");
+  }));
+}
+
 
 // getting products by category -------------------------------------------------
 const loadProducts = async (category) => {
