@@ -2,5 +2,13 @@
     "css.hover.references": false,
     "less.hover.references": false,
     "scss.hover.references": false,
-    "html.hover.references": false
+    "html.hover.references": false,
+    "cSpell.words": [
+        "-webkit-background-clip",
+        "bttn",
+        "jost",
+        "Jost",
+        "kontes",
+        "vulturapersonaluseonly"
+    ]
 }

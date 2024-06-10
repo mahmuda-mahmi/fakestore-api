@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="lofi" class="bg-gray-50">
 
 <head>
   <meta charset="UTF-8">
@@ -14,23 +14,23 @@
 
 <body>
   <!-- -------------------------- NAVBAR ---------------------- -->
-  <section>
-    <div class="navbar bg-base-100">
+  <section class="py-2 bg-white shadow-sm">
+    <div class="navbar">
       <div class="flex-1">
-        <a class="text-5xl f1 font-semibold" href="index.html">Unreal Store</a>
+        <a class="text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
       </div>
 
       <div class="flex-none gap-2">
         <div class="flex" id="categories">
-          <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize " onclick="getAllProducts();changeName('All Products')">All</a></li>
-          
+          <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
         </div>
 
         <div class="join">
-          <input class="input input-bordered join-item focus:outline-none rounded-lg" placeholder="Enter what you want!" id="input-text"/>
-          <button class="btn join-item rounded-lg bg-slate-800 text-white hover:text-slate-800" onclick="searchProduct()">Search</button>
+          <input class="input input-bordered join-item focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
+          <button class="btn join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
         </div>
-        <!-- <div class="dropdown dropdown-end"> -->
+
+        <!--  ------------add to cart part!---------
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
           <div class="indicator">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -40,7 +40,8 @@
               </svg>
             <span class="badge badge-sm indicator-item">8</span>
           </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
   </section>
@@ -49,11 +50,11 @@
   <section class="w-11/12 mx-auto my-6">
     <div class="flex justify-between">
       <div>
-        <h2 id="current-category" class="capitalize font-semibold text-2xl">All Products</h2>
+        <h2 id="current-category" class="capitalize font-semibold text-2xl sans ">All Products</h2>
       </div>
       <div class="flex gap-4 *:bg-slate-800 *:text-lg *:text-white *:py-2 *:px-3 *:rounded-lg *:font-bold">
-        <button onclick="sortPrice()"><i class="fa-sharp fa-solid fa-arrow-up-1-9"></i></button>
-        <button onclick="sortByRating()"><i class="fa-sharp fa-solid fa-arrow-down-wide-short"></i></button>
+        <button class="bttn" onclick="sortPrice()"><i class="fa-sharp fa-solid fa-arrow-up-1-9"></i></button>
+        <button class="bttn" onclick="sortByRating()"><i class="fa-sharp fa-solid fa-arrow-down-wide-short"></i></button>
       </div>
     </div>
   </section>

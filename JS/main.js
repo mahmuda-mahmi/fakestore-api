@@ -15,15 +15,15 @@ const showAllProducts = (products = productsArray) => {
     products.forEach(element => {
         // console.log(element);
         const div = document.createElement('div');
-        div.classList = `card glass p-5`;
+        div.classList = `card glass p-5 bg-white shadow-xl`;
         div.innerHTML = `
                 <figure><img src="${element.image}" class="w-full h-60 object-contain"/></figure>
                 <div class="card-body p-0 justify-between">
-                <h2 class="text-sm my-2 font-semibold text-center">${element.title}</h2>
-                <p class="font-semibold text-center">$${element.price}</p>
+                <h2 class="text-sm my-2 font-semibold text-center sans">${element.title}</h2>
+                <p class="font-semibold text-center sans">$${element.price}</p>
                 <div class ="flex gap-4 justify-between items-center px-4">
-                <p>${element.rating.rate} <i class="fa-sharp fa-solid fa-star"></i> (${element.rating.count})</p>
-                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-sm"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
+                <p class="sans">${element.rating.rate} <i class="fa-sharp fa-solid fa-star"></i> (${element.rating.count})</p>
+                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-lg bttn "><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
                 </div>
                 </div>`;
         showCards.appendChild(div);
@@ -47,7 +47,7 @@ const menuName = (names) => {
         const li = document.createElement('li');
         li.classList = "list-none";
         li.innerHTML = `
-        <a class="cursor-pointer capitalize nav-active nav-menu" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
+        <a class="cursor-pointer capitalize nav-active nav-menu sans" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
         menu.appendChild(li);
     })
     activeMenu();

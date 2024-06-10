@@ -1,19 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #EA2027!important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
-    font-family: 'F1';
-    src: url('../fonts/f1.ttf') format('truetype');
+    font-family: 'F2';
+    src: url('../fonts/vulturapersonaluseonly-r90mv.otf') format('truetype');
 }
 
-.jost{
-    font-family: "Jost", sans-serif;
+
+*::selection{
+    background-color: #ee5a24e0;
+    color: #fff;
 }
 
-.f1{
-    font-family: "F1";
+/* for logo */
+.f2{
+    font-family: "F2";
+    background: -webkit-linear-gradient(#EA2027, #EE5A24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sans{
+    font-family: "Work Sans", sans-serif;
 }
 
 .active{
-    background-color: #1e293b ;
+    background-color: #Ec3d25 ;
     color: #fff;
     font-size: 16px;
     line-height: 1;
@@ -24,5 +41,27 @@
     font-size: 14px;
     line-height: 1;
     border-radius: 5px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------------------ for button ---------------------------------------------------------------- */
+.bttn {
+    background-image: linear-gradient(to right, #EA2027 0%, #EE5A24 51%, #EA2027 100%);
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.bttn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
