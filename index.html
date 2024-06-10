@@ -13,24 +13,23 @@
 </head>
 
 <body>
-  <!-- -------------------------- NAVBAR ---------------------- -->
+  <!-- - -------------------------- NAVBAR ---------------------- 
   <section class="py-2 bg-white shadow-sm">
     <div class="navbar">
       <div class="flex-1">
         <a class="text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
       </div>
 
-      <div class="flex-none gap-2">
+      <div class="flex-none gap-2 px-2">
         <div class="flex" id="categories">
           <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
         </div>
 
         <div class="join">
-          <input class="input input-bordered join-item focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
+          <input class="input input-bordered join-item w-44 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
           <button class="btn join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
-        </div>
-
-        <!--  ------------add to cart part!---------
+        </div> 
+        ------------add to cart part!---------
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
           <div class="indicator">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -40,8 +39,34 @@
               </svg>
             <span class="badge badge-sm indicator-item">8</span>
           </div>
-        </div> -->
+          -----------------------------------------------------
+      </div>
+    </div>
+  </section> -->
 
+  <section>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden xl:hidden 2xl:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </div>
+          <ul class="flex" id="categories">
+            <li class="list-none"><a class="nav-active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
+          </ul>
+        </div>
+        <a class="text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
+      </div>
+      <div class="navbar-center hidden lg:flex xl:flex 2xl:flex">
+        <ul class="flex" id="categories">
+          <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <div class="join">
+          <input class="input input-bordered join-item w-44 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
+          <button class="btn join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
+        </div>
       </div>
     </div>
   </section>
