@@ -41,6 +41,7 @@ const getMenuNames = async () => {
 /// getting menu names -----------------
 const menuName = (names) => {
     const menu = document.getElementById('categories');
+    const menu2 = document.getElementById('categories2');
 
     names.forEach(element => {
         const escapedElement = element.replace(/'/g, "\\'");
@@ -48,7 +49,15 @@ const menuName = (names) => {
         li.classList = "list-none";
         li.innerHTML = `
         <a class="cursor-pointer capitalize nav-active nav-menu sans" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
+        /// for responsive menu 
+        const li2 = document.createElement('li');
+        li2.classList = "list-none";
+        li2.innerHTML = `
+        <a class="cursor-pointer capitalize nav-active nav-menu sans" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
+
+        // append to menu
         menu.appendChild(li);
+        menu2.appendChild(li2);
     })
     activeMenu();
 }
