@@ -23,7 +23,7 @@ const showAllProducts = (products = productsArray) => {
                 <p class="font-semibold text-center sans">$${element.price}</p>
                 <div class ="flex gap-4 justify-between items-center px-4">
                 <p class="sans">${element.rating.rate} <i class="fa-sharp fa-solid fa-star"></i> (${element.rating.count})</p>
-                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-lg bttn "><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
+                <button class="font-bold bg-slate-800 py-3 px-4 text-white rounded-lg bttn ">Add To <i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
                 </div>
                 </div>`;
         showCards.appendChild(div);
@@ -53,13 +53,14 @@ const menuName = (names) => {
         const li2 = document.createElement('li');
         li2.classList = "list-none";
         li2.innerHTML = `
-        <a class="cursor-pointer capitalize nav-active nav-menu sans my-1" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
+        <a class="cursor-pointer capitalize nav-active2 nav-menu-dropdown sans my-1" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
 
         // append to menu
         menu.appendChild(li);
         menu2.appendChild(li2);
     })
     activeMenu();
+    activeMenu2()
 }
 
 //// changing the name of category --------------------------------------
@@ -74,6 +75,15 @@ const activeMenu = () => {
     // e.preventDefault();
     document.querySelector(".nav-active.active").classList.remove("active");
     btn.classList.add("active");
+  }));
+}
+
+const activeMenu2 = () => {
+    const links = document.querySelectorAll(".nav-active2");
+    links.forEach(btn => btn.addEventListener("click",(e)=>{
+    // e.preventDefault();
+    document.querySelector(".nav-active2.active-dropdown").classList.remove("active-dropdown");
+    btn.classList.add("active-dropdown");
   }));
 }
 

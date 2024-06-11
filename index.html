@@ -33,36 +33,37 @@
     </div>
   </section> -->
 
+  <!-- -------------------------- NAVBAR ----------------------  -->
   <section class="py-2 bg-white shadow-sm">
-      <div class="navbar">
-          <div class="navbar-start w-full lg:w-1/5 sm:w-4/5 md:w-3/5 xl:w-2/5 2xl:w-2/5">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden xl:hidden 2xl:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-              </div>
-              <ul tabindex="0" class="flex menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56" id="categories2">
-              <div class="join my-2">
-                <input class="input input-bordered join-item w-32 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
-                <button class="btn w-16 join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
-              </div>
-                <li class="list-none"><a class="nav-active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
-              </ul>
-            </div>
-            <a class="text-4xl lg:text-3xl xl:text-4xl sm:text-4xl md:text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
+    <div class="navbar">
+      <div class="navbar-start w-full sm:w-4/5 md:w-4/5 lg:w-1/4 xl:w-2/5 2xl:w-2/5">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden xl:hidden 2xl:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-          <div class="navbar-end w-4/5 pr-4">
-            <div class="hidden md:hidden lg:flex xl:flex">
-            <ul class="items-center menu-horizontal px-1" id="categories">
-              <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
-            </ul>
-            <div class="join">
-              <input class="input input-bordered join-item w-44 lg:w-32 xl:w-44 2xl:w-44 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
-              <button class="btn w-16 lg:w-16 xl:w-20 join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
+          <ul tabindex="0" class="flex menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56" id="categories2">
+            <div class="join my-2">
+              <input class="input input-bordered join-item w-32 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
+              <button class="btn w-16 join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
             </div>
-            </div> 
-          </div>
+            <li class="list-none"><a class="nav-active2 active-dropdown nav-menu-dropdown cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
+          </ul>
         </div>
-  </section>
+        <a class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
+      </div>
+      <div class="navbar-end w-4/5 pr-4">
+        <div class="hidden md:hidden lg:flex xl:flex">
+        <ul class="items-center menu-horizontal px-1" id="categories">
+          <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
+        </ul>
+        <div class="join">
+          <input class="input input-bordered join-item w-44 lg:w-32 xl:w-44 2xl:w-44 pr-1 focus:outline-none focus:border-[#Ec3d25] rounded-lg text-black bg-white border-[#Ec3d25] sans" placeholder="Enter what you want!" id="input-text"/>
+          <button class="btn w-16 lg:w-16 xl:w-20 join-item rounded-lg hover:bg-[#Ec3d25] hover:text-white text-orange-600 bg-white border-[#Ec3d25] sans" onclick="searchProduct()">Search</button>
+        </div>
+        </div> 
+      </div>
+    </div>
+  </section>  
   
 
 
@@ -81,7 +82,7 @@
 
   <!-- ---------------------------- SHOW ALL CARDS ------------------------------ -->
   <section class="w-11/12 mx-auto my-6">
-    <div id="showAllCards" class="grid grid-cols-4 gap-4 my-4">
+    <div id="showAllCards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4 my-4">
 
     </div>
 

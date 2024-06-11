@@ -44,6 +44,20 @@
     font-weight: 600;
 }
 
+.active-dropdown{
+    background-color: #Ec3d25 ;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+}
+.nav-menu-dropdown{
+    padding: 12px 15px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
 
 /* ------------------------------------------------------ for button ---------------------------------------------------------------- */
 .bttn {
