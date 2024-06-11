@@ -35,7 +35,7 @@
 
   <!-- -------------------------- NAVBAR ----------------------  -->
   <section class="py-2 bg-white shadow-sm">
-    <div class="navbar">
+    <div class="navbar block sm:block md:flex lg;flex xl:flex 2xl:flex">
       <div class="navbar-start w-full sm:w-4/5 md:w-4/5 lg:w-1/4 xl:w-2/5 2xl:w-2/5">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden xl:hidden 2xl:hidden">
@@ -49,10 +49,10 @@
             <li class="list-none"><a class="nav-active2 active-dropdown nav-menu-dropdown cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
           </ul>
         </div>
-        <a class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl f2 font-semibold" href="index.html">Unreal Store</a>
+        <a class="text-5xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl f2 font-semibold" href="index.html">Unreal Store</a>
       </div>
-      <div class="navbar-end w-4/5 pr-4">
-        <div class="hidden md:hidden lg:flex xl:flex">
+      <div class="navbar-end hidden md:block lg:block xl:block 2xl:block w-4/5 pr-4">
+        <div class="hidden md:hidden lg:flex xl:flex 2xl:flex justify-end">
         <ul class="items-center menu-horizontal px-1" id="categories">
           <li class="list-none"><a class="nav-active active nav-menu cursor-pointer capitalize sans" onclick="getAllProducts();changeName('All Products')">All</a></li>
         </ul>
