@@ -53,7 +53,7 @@ const menuName = (names) => {
         const li2 = document.createElement('li');
         li2.classList = "list-none";
         li2.innerHTML = `
-        <a class="cursor-pointer capitalize nav-active nav-menu sans" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
+        <a class="cursor-pointer capitalize nav-active nav-menu sans my-1" onclick="loadProducts('${escapedElement}');changeName('${escapedElement}')">${element}</a>`;
 
         // append to menu
         menu.appendChild(li);
